@@ -1,0 +1,59 @@
+---
+# Example metadata for a single dataset. Lines beginning with # are comments and not
+# recognized by scripts that might automatically parse this information.
+name: State Corporate Income Tax Rates
+source:
+  name: Facts and Figures
+  link: http://taxfoundation.org/article/facts-figures-2016-how-does-your-state-compare
+  soure_meta:
+    # source_meta has no defined schema except in relation to another project. For example,
+    # here the source meta lists the table number and section header for Facts and Figures,
+    # where this dataset comes from. This information isn't necessarily important unless
+    # a script written for Facts and Figures specifically is using it.
+    table: 15
+    header: Corporate Income Taxes
+date: Fiscal Year 2013
+repository: https://github.com/TaxFoundation/facts-and-figures
+filename: 15-state-corporate-income-tax-rates-2016.csv
+columns:
+  - position: 1
+    type: numeric
+    name: id
+    required: true
+  - position: 2
+    type: text
+    name: stateAbbr
+    required: true
+  - position: 3
+    type: text
+    name: stateName
+    required: true
+  # This dataset contains brackets, which are probably the trickiest datatype in Tax Foundation
+  # datasets. A bracket consists of two columns: an income level where, over that amount, the
+  # marginal rate applies; and the rate itself. While marginal rates are often expressed as
+  # income ranges, this can automatically be computers by scripts. All that's necessary here
+  # is the lower-bound of the range. Output scripts will use the next-highest bracket value
+  # found as the upper-bound.
+  #
+  # Brackets take up two columns, seen here as position 4: incomeGreaterThan and position 5:
+  # rate.
+  - position: [4, 5]
+    type: brackets
+    name: ['incomeGreaterThan', 'rate']
+footnotes:
+  - for_dataset:
+    note: >
+      If you need to add a footnote to the entire dataset (e.g., defining a term),
+      you can do it like this.
+  - for_columns:
+    - positions: [3]
+    - note: >
+      If you wanted to add a footnote to a specific column, you would do it like this.
+  - for_rows:
+    - ids: [1, 3, 25, 36]
+    - note: >
+      This is an example of a footnote. By using the > character in the line above,
+      I can skip to the next line in this text file but the final rendered text
+      will be combined into a single line. No need to include extra spaces--that is
+      automatically included when the lines are combined.
+---

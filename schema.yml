@@ -1,0 +1,15 @@
+data-types:
+  - name: percentage
+    sortable: true
+  - name: currency
+    sortable: true
+  - name: brackets
+    sortable: false
+  - name: numeric
+    sortable: true
+  - name: text
+    sortable: true
+  - name: range
+    sortable: false
+  - name: date
+    sortable: true
