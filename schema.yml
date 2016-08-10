@@ -1,15 +1,27 @@
 data-types:
-  - name: percentage
-    sortable: true
-  - name: currency
-    sortable: true
-  - name: brackets
-    sortable: false
   - name: numeric
     sortable: true
+    description: >
+      Numeric data are decimal-formatted numbers. There are no commas, nor any other signs
+      (e.g., $, %, etc.).
+    regex: /^\d+(?:\.\d+)?$/
+  - name: percentage
+    sortable: true
+    description: >
+      Percentage is a decimal-formatted number between zero and one.
+      This data should not be formatted with a % sign at the end--this will
+      be added automatically by scripts that output data in various formats.
+    regex: /^0?\.+\d+$|^0$|^1$/
   - name: text
     sortable: true
-  - name: range
-    sortable: false
+    description: >
+      Any kind of textual data. This kind of data is qualitative.
+    regex: /.?/
   - name: date
     sortable: true
+    description: >
+      Dates represent specific dates. Time-of-day information is not included.
+      Dates follow the US format of MM-DD-YYYY. Leading zeroes may be omitted,
+      though this is not preferred. Usage of / or another delimitter between
+      values is not premitted.
+    regex: /^(?:0?[1-9]|1[012])-(?:0?[1-9]|[12][0-9]|3[01])-(?:1[789]|20)\d\d$/
