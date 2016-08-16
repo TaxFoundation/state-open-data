@@ -41,19 +41,17 @@ columns:
     type: brackets
     name: ['incomeGreaterThan', 'rate']
 footnotes:
-  - for_dataset:
-    note: >
-      If you need to add a footnote to the entire dataset (e.g., defining a term),
-      you can do it like this.
-  - for_columns:
-    - positions: [3]
-    - note: >
-      If you wanted to add a footnote to a specific column, you would do it like this.
-  - for_rows:
-    - ids: [1, 3, 25, 36]
-    - note: >
-      This is an example of a footnote. By using the > character in the line above,
-      I can skip to the next line in this text file but the final rendered text
-      will be combined into a single line. No need to include extra spaces--that is
-      automatically included when the lines are combined.
+  - note: >
+      This is where you write the footnote. It's OK to write notes on multiple lines.
+      Different lines of the note will be combined into a single paragraph.
+    applies_to: states
+    apllied_at: [11, 23] # List the FIPS codes of the states to which this note applies.
+  - note: >
+      Here's another note. While less common, we'll apply this to a specific column of data.
+    applies_to: data
+    apllied_at: [4, 5] # List the column numbers of the data to which this note applies.
+  - note: >
+      In this note, we'll apply it to the entire data table. No need to define `applied_at`,
+      since this note isn't limited to a subset of the data.
+    applies_to: dataset
 ---
