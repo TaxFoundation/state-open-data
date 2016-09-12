@@ -13,8 +13,8 @@ source:
     table: 15
     header: Corporate Income Taxes
 date: Fiscal Year 2013
-repository: https://github.com/TaxFoundation/facts-and-figures
-filename: 15-state-corporate-income-tax-rates-2016.csv
+repository: https://github.com/TaxFoundation/state-open-data
+filename: example-dataset.csv
 columns:
   - position: 1
     type: numeric
@@ -37,6 +37,10 @@ columns:
   #
   # Brackets take up two columns, seen here as position 4: incomeGreaterThan and position 5:
   # rate.
+  #
+  # Where no data is listed for a state, programs should assume that the data is not available.
+  # Here, a state with no corporate income tax, rather than having blank data, has a rate and
+  # bracket of 0, 0.
   - position: [4, 5]
     type: brackets
     name: ['incomeGreaterThan', 'rate']

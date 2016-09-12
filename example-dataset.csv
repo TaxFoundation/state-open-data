@@ -59,7 +59,7 @@ id,stateAbbr,stateName,rate,incomeGreaterThan
 30,MT,Montana,0.0675,0
 31,NE,Nebraska,0.0558,0
 31,NE,Nebraska,0.0781,100000
-32,NV,Nevada,,
+32,NV,Nevada,0,0
 33,NH,New Hampshire,0.085,0
 34,NJ,New Jersey,0.09,100000
 35,NM,New Mexico,0.048,0
@@ -70,22 +70,22 @@ id,stateAbbr,stateName,rate,incomeGreaterThan
 38,ND,North Dakota,0.0141,0
 38,ND,North Dakota,0.0355,25000
 38,ND,North Dakota,0.0431,50000
-39,OH,Ohio,,
+39,OH,Ohio,0,0
 40,OK,Oklahoma,0.06,0
 41,OR,Oregon,0.066,0
 41,OR,Oregon,0.076,1000000
 42,PA,Pennsylvania,0.0999,0
 44,RI,Rhode Island,0.07,0
 45,SC,South Carolina,0.05,0
-46,SD,South Dakota,,
+46,SD,South Dakota,0,0
 47,TN,Tennessee,0.065,0
-48,TX,Texas,,
+48,TX,Texas,0,0
 49,UT,Utah,0.05,0
 50,VT,Vermont,0.06,0
 50,VT,Vermont,0.07,10000
 50,VT,Vermont,0.085,25000
 51,VA,Virginia,0.06,0
-53,WA,Washington,,
+53,WA,Washington,0,0
 54,WV,West Virginia,0.065,0
 55,WI,Wisconsin,0.079,0
-56,WY,Wyoming,,
+56,WY,Wyoming,0,0
