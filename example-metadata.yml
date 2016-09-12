@@ -44,12 +44,15 @@ footnotes:
   - note: >
       This is where you write the footnote. It's OK to write notes on multiple lines.
       Different lines of the note will be combined into a single paragraph.
-    applies_to: states
-    apllied_at: [11, 23] # List the FIPS codes of the states to which this note applies.
+    applies_to: rows
+    apllied_at: [11, 23]
+    # List the ID numbers of the rows to which this note applies.
+    # In this example, ID numbers will repeat for each tax bracket a state has.
+    # Don't worry about the repetition of the state's FIPS ID. The note will work fine.
   - note: >
       Here's another note. While less common, we'll apply this to a specific column of data.
-    applies_to: data
-    apllied_at: [4, 5] # List the column numbers of the data to which this note applies.
+    applies_to: columns
+    apllied_at: ['incomeGreaterThan', 'rate'] # List the column names to which this note applies.
   - note: >
       In this note, we'll apply it to the entire data table. No need to define `applied_at`,
       since this note isn't limited to a subset of the data.
