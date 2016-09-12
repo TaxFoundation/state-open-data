@@ -11,3 +11,8 @@ Each dataset will require its own metadata file. This file will describe the con
 ## Example
 
 The file `example-metadata.yml` is used to describe the data inside `example-dataset.csv`. This example covers the basics of naming and describing columns of data. The values for individual records can be programmatically checked against the regular expressions in `schema.yml` for validity. Then separate programs can be used to create versions of the raw data for consumption.
+
+## Common Conventions
+
+* Raw data should be published as **comma separated values (CSV)** files.
+* Raw data should be kept on **GitHub for version control**.
