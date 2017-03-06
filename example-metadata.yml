@@ -36,7 +36,7 @@ dataset_columns:
   # This dataset contains brackets, which are probably the trickiest datatype in Tax Foundation
   # datasets. A bracket consists of two columns: an income level where, over that amount, the
   # marginal rate applies; and the rate itself. While marginal rates are often expressed as
-  # income ranges, this can automatically be computers by scripts. All that's necessary here
+  # income ranges, this can automatically be computered by scripts. All that's necessary here
   # is the lower-bound of the range. Output scripts will use the next-highest bracket value
   # found as the upper-bound.
   #
