@@ -1,21 +1,26 @@
 ---
 # Example metadata for a single dataset. Lines beginning with # are comments and not
 # recognized by scripts that might automatically parse this information.
-name: State Corporate Income Tax Rates
-source:
-  name: Facts and Figures
-  link: http://taxfoundation.org/article/facts-figures-2016-how-does-your-state-compare
-  soure_meta:
-    # source_meta has no defined schema except in relation to another project. For example,
-    # here the source meta lists the table number and section header for Facts and Figures,
-    # where this dataset comes from. This information isn't necessarily important unless
-    # a script written for Facts and Figures specifically is using it.
-    table: 15
-    header: Corporate Income Taxes
-date: Fiscal Year 2013
-repository: https://github.com/TaxFoundation/state-open-data
-filename: example-dataset.csv
-columns:
+dataset_name: State Corporate Income Tax Rates
+dataset_sources:
+  - source_title: Facts and Figures
+    source_publisher: Tax Foundation
+    source_link: https://taxfoundation.org/facts-figures-2016-how-does-your-state-compare
+    source_publisher_link: https://taxfoundation.org
+    soure_metadata:
+      # source_meta has no defined schema except in relation to another project. For example,
+      # here the source meta lists the table number and section header for Facts and Figures,
+      # where this dataset comes from. This information isn't necessarily important unless
+      # a script written for Facts and Figures specifically is using it.
+      - name: Table
+        value: 15
+      - name: Header
+        value: Corporate Income Taxes
+dataset_date: Fiscal Year 2013
+dataset_repository: https://github.com/TaxFoundation/state-open-data
+dataset_filename: example-dataset.csv
+dataset_columns:
+  # For ease of human use, the position of the first column is 1 and not 0.
   - position: 1
     type: numeric
     name: id
@@ -44,7 +49,7 @@ columns:
   - position: [4, 5]
     type: brackets
     name: ['incomeGreaterThan', 'rate']
-footnotes:
+dataset_footnotes:
   - note: >
       This is where you write the footnote. It's OK to write notes on multiple lines.
       Different lines of the note will be combined into a single paragraph.
